@@ -1,0 +1,79 @@
+* {
+  padding: 0px;
+  margin: 0px;
+
+  font-family: "Press Start 2P", sans-serif;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  background: #1A1B26;
+
+}
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  padding: 3rem;
+}
+
+
+h1 {
+  font-size: 16px;
+
+}
+
+.img {
+  margin-top: 1.2rem;
+  width: auto;
+  height: auto;
+}
+
+h2 {
+  margin-top: 1.2rem;
+  font-size: 14px;
+}
+
+p {
+  margin-top: 1.2rem;
+  font-size: 10px;
+}
+
+.count {
+  color: red;
+}
+
+.text-direction {
+  margin-top: 1.2rem;
+  width: 12rem;
+
+  border-radius: 5px;
+  padding: 5px 0px 5px 0px;
+
+  text-align: center;
+  font-size: 10px;
+  color: #1A1B26;
+}
+
+
+.btn-send-direction {
+  margin-top: 0.5rem;
+  width: 10rem;
+
+  background: #1A1B26;
+
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px 0px 5px 0px;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+
