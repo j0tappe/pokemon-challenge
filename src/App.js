@@ -3,7 +3,6 @@ import './App.css';
 import { Form } from '@unform/web';
 
 import Input from './components/Form/Input'
-import { useContext } from 'react';
 
 const position = [0, 0];
 const pokemonsCatch = ['[0,0]'];
@@ -13,7 +12,7 @@ function App() {
   function handleSubmit(data) {
 
     // Recebe a direção em minisculo e transforma em maiusculo.
-    var direction = data.setDirection.toUpperCase();
+    var direction = data.value.toUpperCase();
     validate(direction);
     console.log(direction);
     move(direction);
@@ -68,8 +67,7 @@ function App() {
 
         <Form onSubmit={handleSubmit} >
           <Input
-            class="text-direction"
-            name="setDirection"
+            name="value"
             placeholder="Where are we going?"
           /><br />
           <button type="submit" class="btn-send-direction">Send Direction</button>
