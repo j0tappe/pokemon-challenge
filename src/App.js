@@ -3,52 +3,55 @@ import './App.css';
 import { Form } from '@unform/web';
 
 import Input from './components/Form/Input'
+import { useContext } from 'react';
 
-
+const position = [0, 0];
+const pokemonsCatch = ['[0,0]'];
 
 function App() {
+
   function handleSubmit(data) {
 
-    var positionY = 0;
-    var positionX = 0;
-    var position = [];
-    const pokemonsCatch = [[0, 0]];
-
-    // console.log(data);
-    // Validar
-    console.log(data.setDirection);
-    move(data.setDirection);
+    // Recebe a direção em minisculo e transforma em maiusculo.
+    var direction = data.setDirection.toUpperCase();
+    validate(direction);
+    console.log(direction);
+    move(direction);
     handlePokemonsCatch();
     // Gerar saida
   }
 
+  // Validação da entrada da direção
+  function validate(direction) {
+    if (direction != "N" && direction != "S" && direction != "E" && direction != "O") {
+      alert("Please enter a valid position")
+    }
+  }
+
   // Setando direção
   function move(direction) {
-    switch (direction) {
-      case 'N':
-        this.positionY++;
-      case 'S':
-        this.positionY--;
-      case 'E':
-        this.positionX++;
-      case 'O':
-        this.positionX--;
+    if (direction == "N") {
+      position[1]++;
     }
+    if (direction == "S") {
+      position[1]--;
+    }
+    if (direction == "E") {
+      position[0]++;
+    }
+    if (direction == "O") {
+      position[0]--;
+    }
+
   }
 
   // Capturando pokemons de novas posições
   function handlePokemonsCatch() {
-    position = [positionX, positionY];
-
-    if (pokemonsCatch.includes(position)) {
-      pokemonsCatch.push(position);
+    if (!pokemonsCatch.includes(JSON.stringify(position))) {
+      pokemonsCatch.push(JSON.stringify(position));
     }
+    console.log(pokemonsCatch);
   }
-
-
-
-
-
 
   return (
     <div className="App">
@@ -63,16 +66,16 @@ function App() {
         <h2>Choose which direction Ash should go</h2>
         <p>| N to North | S to South | E to East | O to West |</p>
 
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} >
           <Input
-            id="text-direction"
+            class="text-direction"
             name="setDirection"
             placeholder="Where are we going?"
           /><br />
           <button type="submit" class="btn-send-direction">Send Direction</button>
         </Form>
 
-        <p>Gotcha! Ash catch <span class="count">{pokemonsCatch.length} </span>pokemons.</p>
+        <p>Gotcha! Ash catch <span class="count">0 </span>pokemons.</p>
       </div>
     </div>
   );
