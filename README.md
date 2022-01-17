@@ -1,4 +1,8 @@
-# Ash's Adventure 
+<h1>
+  <p align="left">
+     <img src="https://user-images.githubusercontent.com/31297561/149831313-f7d11f6e-23bd-4741-9934-2236ee17c036.png" width="50"/> Ash's Adventure 
+  </p>
+</h1>
 
 Projeto desenvolvido para desafio da candidatura à vaga de Software Engineer na [Premium Minds](https://www.premium-minds.com/).
 

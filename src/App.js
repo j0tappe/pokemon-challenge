@@ -52,6 +52,11 @@ function App() {
     console.log(pokemonsCatch);
   }
 
+  // Limpar campos após envio da direção
+  function apagaForm() {
+    document.getElementById('input').reset();
+  }
+
   return (
     <div className="App">
       <div class="container">
@@ -67,8 +72,8 @@ function App() {
 
         <Form onSubmit={handleSubmit} >
           <Input
+            id="input"
             name="value"
-            placeholder="Where are we going?"
           /><br />
           <button type="submit" class="btn-send-direction">Send Direction</button>
         </Form>
