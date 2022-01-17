@@ -58,8 +58,14 @@ input {
   text-align: center;
   font-size: 10px;
   color: #1A1B26;
+
+  /* tratei a entrada de letras maiusculas aqui também para ao digitar, ja aparece em maisculo no campo de texto */
+  text-transform: uppercase;
 }
 
+.input::-webkit-input-placeholder {
+  font-style: italic;
+}
 
 
 .btn-send-direction {

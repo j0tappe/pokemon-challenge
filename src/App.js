@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import './styles.css';
 import { Form } from '@unform/web';
 
 import Input from './components/Form/Input'
@@ -11,7 +11,7 @@ function App() {
 
   function handleSubmit(data) {
 
-    // Recebe a direção em minisculo e transforma em maiusculo.
+    // Recebe a direção em minisculo e transforma em maiusculo. (tratei isso no css também)
     var direction = data.value.toUpperCase();
     validate(direction);
     console.log(direction);
@@ -53,9 +53,18 @@ function App() {
   }
 
   // Limpar campos após envio da direção
-  function apagaForm() {
+  /*
+  function clearField() {
     document.getElementById('input').reset();
   }
+  
+  */
+
+  // Atualizar pokemons capturados
+  //const [count, setCount] = useState(0);
+
+  //useEffect(() => { }, [count]);
+
 
   return (
     <div className="App">
@@ -74,8 +83,14 @@ function App() {
           <Input
             id="input"
             name="value"
+            placeholder="Where are we going?"
           /><br />
-          <button type="submit" class="btn-send-direction">Send Direction</button>
+          <button
+            type="submit"
+            class="btn-send-direction"
+          //onClick={() => setCount(count + 1)}
+
+          >Send Direction</button>
         </Form>
 
         <p>Gotcha! Ash catch <span class="count">0 </span>pokemons.</p>
