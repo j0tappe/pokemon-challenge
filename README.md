@@ -4,9 +4,9 @@ Projeto desenvolvido para desafio da candidatura à vaga de Software Engineer na
 
 ## 🧩 Sobre o projeto
 
-- Este projeto tem como o intuito fazer com o que o Ash caminhe por um mapa aberto, onde cada posição que ele andar irá encontrar um pokemon e captura-lo, caso ele volte a uma posição que ele ja percorreu não há encontro com novos pokemons e por consequencia nenhuma nova captura. Você pode conferir como ficou o projeto acessando o deploy da aplicação **[clicando aqui.](/)**
+- Este projeto tem como o intuito fazer com o que o Ash caminhe por um mapa aberto, onde cada posição que ele andar irá encontrar um pokemon e captura-lo, caso ele volte a uma posição que ele ja percorreu não há encontro com novos pokemons e por consequencia nenhuma nova captura. Você pode conferir os requisitos do teste **[clicando aqui!](https://github.com/j0tappe/pokemon-challenge/files/7884178/Challenge_Pokemon.pdf)** e conferir como ficou o projeto acessando o deploy da aplicação **[clicando aqui.](/)**
 
-- Você pode conferir os requisitos do teste [clicando aqui!](https://github.com/j0tappe/pokemon-challenge/files/7884178/Challenge_Pokemon.pdf)
+- 
 
 ![aplicação](https://user-images.githubusercontent.com/31297561/149825457-50573844-25fd-4fcf-9b8e-cd5cacb9aeea.gif)
 
@@ -18,7 +18,7 @@ Projeto desenvolvido para desafio da candidatura à vaga de Software Engineer na
 
 ## 🖌️ Layout
 
-- O layout foi desenvolvido em [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) junto ao [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML) apenas para dar uma visão mais amigavel a aplicação e não utlizar apenas do terminal, e também para poder utilizar os conhecimentos em ReactJs com JavaScript.
+- O layout foi desenvolvido em **[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)** junto ao **[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)** apenas para dar uma visão mais amigavel a aplicação e não utlizar apenas do terminal, e também para poder utilizar os conhecimentos em ReactJs com JavaScript.
 
 
 ## 💻 Instalação das dependências

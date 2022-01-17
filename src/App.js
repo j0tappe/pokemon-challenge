@@ -23,7 +23,7 @@ function App() {
   // Validação da entrada da direção
   function validate(direction) {
     if (direction != "N" && direction != "S" && direction != "E" && direction != "O") {
-      alert("Please enter a valid position")
+      alert("Please enter a valid position!")
     }
   }
 
