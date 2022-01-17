@@ -8,7 +8,7 @@ Projeto desenvolvido para desafio da candidatura à vaga de Software Engineer na
 
 - Você pode conferir os requisitos do teste [clicando aqui!](https://github.com/j0tappe/pokemon-challenge/files/7884178/Challenge_Pokemon.pdf)
 
-![Página inicial](https://user-images.githubusercontent.com/31297561/149824444-e7846e7c-2960-417d-bdb6-1315dddc7d3b.mp4)
+![aplicação](https://user-images.githubusercontent.com/31297561/149825457-50573844-25fd-4fcf-9b8e-cd5cacb9aeea.gif)
 
 
 ## 🚀 Tecnologias
