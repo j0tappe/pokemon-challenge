@@ -63,16 +63,17 @@ function App() {
   }
 
   // Atualizar pokemons capturados
-  //const [count, setCount] = useState(0);
-
-  //useEffect(() => { }, [count]);
-
+  /* const [pokemonsCatchs, setPokemonCatchs] = useState(0);
+   handlePokemonsCatch = pokemonsCatchs
+ 
+   useEffect(() => { }, [pokemonsCatchs]);
+   */
 
   return (
     <div className="App">
-      <div class="container">
+      <div className="container">
         <h1>Game Start</h1>
-        <div class="img">
+        <div className="img">
           <img src="http://31.media.tumblr.com/088786d466c3a315d6043b8e59d96770/tumblr_msu2ojWkqz1scncwdo1_500.gif"
             width="50"
             height="50"
@@ -89,13 +90,13 @@ function App() {
           /><br />
           <button
             type="submit"
-            class="btn-send-direction"
-          //onClick={() => setCount(count + 1)}
+            className="btn-send-direction"
+          //onClick={() => setPokemonCatchs(pokemonsCatch + 1)}
 
           >Send Direction</button>
         </Form>
 
-        <p>Gotcha! Ash catch <span class="count">0 </span>pokemons.</p>
+        <p>Gotcha! Ash catch <span className="count">0 </span>pokemons.</p>
       </div>
     </div>
   );
