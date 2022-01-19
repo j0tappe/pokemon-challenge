@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './styles.css';
 import { Form } from '@unform/web';
 
@@ -6,18 +6,28 @@ import Input from './components/Form/Input'
 
 const position = [0, 0];
 const pokemonsCatch = ['[0,0]'];
+//const inputRef = useRef < import('@unform/core').FormHandles > (null);
+
 
 function App() {
+  const formRef = useRef(null);
 
-  function handleSubmit(data) {
+  function handleSubmit(data, { reset }) {
 
     // Recebe a direção em minisculo e transforma em maiusculo. (tratei isso no css também)
     var direction = data.value.toUpperCase();
     validate(direction);
     console.log(direction);
+
+    // Alerta de error
+    //formRef.current.setFieldError('value', 'Wait, you forgot to say where we are going');
+
     move(direction);
     handlePokemonsCatch();
     // Gerar saida
+
+    // Limpando campo após envio da direção
+    reset();
   }
 
   // Validação da entrada da direção
@@ -52,14 +62,6 @@ function App() {
     console.log(pokemonsCatch);
   }
 
-  // Limpar campos após envio da direção
-  /*
-  function clearField() {
-    document.getElementById('input').reset();
-  }
-  
-  */
-
   // Atualizar pokemons capturados
   //const [count, setCount] = useState(0);
 
@@ -79,7 +81,7 @@ function App() {
         <h2>Choose which direction Ash should go</h2>
         <p>| N to North | S to South | E to East | O to West |</p>
 
-        <Form onSubmit={handleSubmit} >
+        <Form ref={formRef} onSubmit={handleSubmit} >
           <Input
             id="input"
             name="value"

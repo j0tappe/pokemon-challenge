@@ -4,7 +4,7 @@ import { useField } from '@unform/core';
 export default function Input({ name }) {
 
     const inputRef = useRef(null);
-    const { fieldName, registerField, defaultValue, error } = useField(name)
+    const { fieldName, registerField, defaultValue, error, ...rest } = useField(name)
 
     useEffect(() => {
         registerField({
@@ -15,7 +15,15 @@ export default function Input({ name }) {
     }, [fieldName, registerField]);
 
     return (
-        <input ref={inputRef} />
+        <div>
+            <input ref={inputRef} />
+
+            {error && <span class="msg-error" style={{ color: '#f00' }}>{error}</span>}
+        </div>
     )
 }
+
+
+
+
 
