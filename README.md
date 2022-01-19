@@ -10,8 +10,7 @@ Projeto desenvolvido para desafio da candidatura à vaga de Software Engineer na
 
 - Este projeto tem como o intuito fazer com o que o Ash caminhe por um mapa aberto, onde cada posição que ele andar irá encontrar um pokemon e captura-lo, caso ele volte a uma posição que ele ja percorreu não há encontro com novos pokemons e por consequencia nenhuma nova captura. Você pode conferir os requisitos do teste **[clicando aqui!](https://github.com/j0tappe/pokemon-challenge/files/7884178/Challenge_Pokemon.pdf)** e conferir como ficou o projeto acessando o deploy da aplicação **[clicando aqui.](/)**
 
-![aplicação](https://user-images.githubusercontent.com/31297561/149825457-50573844-25fd-4fcf-9b8e-cd5cacb9aeea.gif)
-
+![aplicação](https://user-images.githubusercontent.com/31297561/150233494-dfdbe268-7fb7-45f8-b89d-b6e1977490ca.gif)
 
 ## 🚀 Tecnologias
  - **[React](https://reactjs.org)**
