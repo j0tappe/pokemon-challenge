@@ -6,8 +6,6 @@ import Input from './components/Form/Input'
 
 const position = [0, 0];
 const pokemonsCatch = ['[0,0]'];
-//const inputRef = useRef < import('@unform/core').FormHandles > (null);
-
 
 function App() {
   const formRef = useRef(null);
@@ -19,12 +17,8 @@ function App() {
     validate(direction);
     console.log(direction);
 
-    // Alerta de error
-    //formRef.current.setFieldError('value', 'Wait, you forgot to say where we are going');
-
     move(direction);
     handlePokemonsCatch();
-    // Gerar saida
 
     // Limpando campo após envio da direção
     reset();
@@ -59,16 +53,14 @@ function App() {
     if (!pokemonsCatch.includes(JSON.stringify(position))) {
       pokemonsCatch.push(JSON.stringify(position));
     }
+    setCount(pokemonsCatch.length);
     console.log(pokemonsCatch);
   }
 
-  // Atualizar pokemons capturados
-  const [count, setCount] = useState(pokemonsCatch.length);
+  // Atualizar contador de pokemons capturados
 
-  useEffect(() => {
-
-  }, [count]);
-
+  const [count, setCount] = useState(0);
+  useEffect(() => { }, [count]);
 
   return (
     <div className="App">
@@ -92,13 +84,11 @@ function App() {
           <button
             type="submit"
             className="btn-send-direction"
-            onClick={() => setCount(count + 1)}
           >Send Direction</button>
         </Form>
 
         <p>Gotcha! Ash catch <span className="count">{count} </span>pokemons.</p>
 
-        <p className="oldWay">There are <span className="no-pokemons">no pokemons</span> here.</p>
       </div>
     </div>
   );
