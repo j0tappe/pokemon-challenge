@@ -48,6 +48,10 @@ p {
   color: red;
 }
 
+.no-pokemons {
+  color: red;
+}
+
 input {
   margin-top: 1.2rem;
   width: 12rem;

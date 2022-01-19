@@ -63,11 +63,12 @@ function App() {
   }
 
   // Atualizar pokemons capturados
-  /* const [pokemonsCatchs, setPokemonCatchs] = useState(0);
-   handlePokemonsCatch = pokemonsCatchs
- 
-   useEffect(() => { }, [pokemonsCatchs]);
-   */
+  const [count, setCount] = useState(pokemonsCatch.length);
+
+  useEffect(() => {
+
+  }, [count]);
+
 
   return (
     <div className="App">
@@ -91,12 +92,13 @@ function App() {
           <button
             type="submit"
             className="btn-send-direction"
-          //onClick={() => setPokemonCatchs(pokemonsCatch + 1)}
-
+            onClick={() => setCount(count + 1)}
           >Send Direction</button>
         </Form>
 
-        <p>Gotcha! Ash catch <span className="count">0 </span>pokemons.</p>
+        <p>Gotcha! Ash catch <span className="count">{count} </span>pokemons.</p>
+
+        <p className="oldWay">There are <span className="no-pokemons">no pokemons</span> here.</p>
       </div>
     </div>
   );
