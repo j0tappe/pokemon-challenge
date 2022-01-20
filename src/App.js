@@ -10,12 +10,13 @@ const pokemonsCatch = ['[0,0]'];
 function App() {
   const formRef = useRef(null);
 
+
   function handleSubmit(data, { reset }) {
 
     // Recebe a direção em minisculo e transforma em maiusculo. (tratei isso no css também)
     var direction = data.value.toUpperCase();
     validate(direction);
-    console.log(direction);
+    //console.log(direction);
 
     move(direction);
     handlePokemonsCatch();
@@ -54,7 +55,7 @@ function App() {
       pokemonsCatch.push(JSON.stringify(position));
     }
     setCount(pokemonsCatch.length);
-    console.log(pokemonsCatch);
+    //console.log(pokemonsCatch);
   }
 
   // Atualizar contador de pokemons capturados
